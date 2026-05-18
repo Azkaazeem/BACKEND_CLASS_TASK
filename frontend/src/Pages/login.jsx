@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import toast from 'react-hot-toast';
+import {toast} from 'react-hot-toast';
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -111,7 +111,7 @@ const SignIn = () => {
         <div className="bg-[#131315] border-t border-[#2e2e32]">
           <div className="py-4 text-center border-b border-[#2e2e32]">
             <p className="text-[#a1a1aa] text-[13px]">
-              Don't have an account? <Link to="/signup" className="text-white font-medium hover:underline">Sign up</Link>
+              Don't have an account? <Link to="/" className="text-white font-medium hover:underline">Sign up</Link>
             </p>
           </div>
         </div>
