@@ -31,11 +31,10 @@ const SignIn = () => {
 
         toast.success("Login successful!");
         
-        // Match these paths with your App.jsx routes
         if (data.user.role === 'admin') {
-          navigate('/admin'); // Use '/admin' instead of '/admin-dashboard'
+          navigate('/admin');
         } else {
-          navigate('/home');  // Redirect to '/home' instead of '/'
+          navigate('/home');
         }
       } else {
         toast.error(data.message);

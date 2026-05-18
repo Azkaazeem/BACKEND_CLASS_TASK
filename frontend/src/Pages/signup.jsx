@@ -28,17 +28,14 @@ const SignUp = () => {
       toast.dismiss(loadingToast);
 
       if (data.status === true) {
-        // Success popup
         toast.success("Account Created Successfully! 🎉");
         navigate('/signin');
       } else {
-        // Error popup
         toast.error(data.message);
       }
     } catch (error) {
       toast.dismiss(loadingToast);
       console.log("Connection Error:", error);
-      // Server connection failure popup
       toast.error("Unable to connect to the server!");
     }
   };
@@ -50,7 +47,6 @@ const SignUp = () => {
         <div className="p-8 pb-6">
           <p className="text-[#a1a1aa] text-sm text-center mb-7">Create an account to get started</p>
 
-          {/* Profile Picture */}
           <div className="flex justify-center mb-6">
             <label
               htmlFor='profile'
@@ -60,11 +56,8 @@ const SignUp = () => {
             </label>
             <input type="file" className="hidden" id='profile' />
           </div>
-
-          {/* Signup Form */}
           <form onSubmit={handleSignup}>
             
-            {/* Name Input */}
             <div className="flex justify-between items-center mb-1.5">
               <label className="text-[13px] font-medium text-[#ededed]">Full Name</label>
             </div>
@@ -77,7 +70,6 @@ const SignUp = () => {
               className="w-full bg-[#1a1a1d] border border-[#2e2e32] rounded-lg px-3 py-2 text-[13px] text-white placeholder-[#71717a] focus:outline-none focus:border-[#52525b] focus:ring-1 focus:ring-[#52525b] transition-all mb-4"
             />
 
-            {/* Email Input */}
             <div className="flex justify-between items-center mb-1.5">
               <label className="text-[13px] font-medium text-[#ededed]">Email address</label>
             </div>
@@ -90,7 +82,6 @@ const SignUp = () => {
               className="w-full bg-[#1a1a1d] border border-[#2e2e32] rounded-lg px-3 py-2 text-[13px] text-white placeholder-[#71717a] focus:outline-none focus:border-[#52525b] focus:ring-1 focus:ring-[#52525b] transition-all mb-4"
             />
 
-            {/* Password Input */}
             <div className="flex justify-between items-center mb-1.5">
               <label className="text-[13px] font-medium text-[#ededed]">Password</label>
             </div>
@@ -112,7 +103,6 @@ const SignUp = () => {
               </button>
             </div>
 
-            {/* Submit Button */}
             <button type="submit" className="w-full bg-cyan-400 text-black font-semibold py-2 rounded-lg text-[13px] flex items-center justify-center gap-1.5 hover:bg-gray-200 transition-colors">
               Sign Up
               <svg width="12" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -122,7 +112,6 @@ const SignUp = () => {
           </form>
         </div>
 
-        {/* Bottom Links & Footer */}
         <div className="bg-[#131315] border-t border-[#2e2e32]">
           <div className="py-4 text-center border-b border-[#2e2e32]">
             <p className="text-[#a1a1aa] text-[13px]">
