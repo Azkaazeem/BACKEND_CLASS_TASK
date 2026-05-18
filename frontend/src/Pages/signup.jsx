@@ -126,7 +126,7 @@ const SignUp = () => {
         <div className="bg-[#131315] border-t border-[#2e2e32]">
           <div className="py-4 text-center border-b border-[#2e2e32]">
             <p className="text-[#a1a1aa] text-[13px]">
-              Already have an account? <Link to="/signin" className="text-white font-medium hover:underline">Sign in</Link>
+              Already have an account? <Link to="/login" className="text-white font-medium hover:underline">Sign in</Link>
             </p>
           </div>
         </div>

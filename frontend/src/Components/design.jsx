@@ -1,9 +1,9 @@
-const Design = ({ text = 'Apka Text Yahan' }) => {
+const Design = ({ children }) => {
   return (
     <div className="min-h-screen w-full bg-black text-white flex items-center justify-center text-center px-6">
-      <h1 className="m-0 text-6xl md:text-7xl lg:text-8xl font-semibold leading-tight">
-        {text}
-      </h1>
+      <div className="m-0 text-6xl md:text-7xl lg:text-8xl font-semibold leading-tight">
+        {children || 'Apka Text Yahan'}
+      </div>
     </div>
   )
 }
